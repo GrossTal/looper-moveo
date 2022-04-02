@@ -1,8 +1,6 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import Row from './components/Row';
-import Board from './components/Board';
-// import map from 
+import Board from './components/board';
 
 function App() {
 

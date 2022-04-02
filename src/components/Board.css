@@ -1,4 +1,4 @@
-.Board{
+.board{
     display: flex;
     box-shadow: 0 2px 8px rgba(248, 35, 35, 0.25);
     padding: 10px;

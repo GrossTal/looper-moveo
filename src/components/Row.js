@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import React, { useEffect } from 'react';
+import React from 'react';
 import Button from './button/button';
-import './Row.css';
+import './row.css';
 function Row({row, index, setRows, isPlayOn}){
 
     function changeToggle() {

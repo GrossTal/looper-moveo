@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import Row from "../Row";
+import Row from "../row";
 import './rows.css';
 
 function Rows({ row, isPlaying, isLoopOn, seconds }) {

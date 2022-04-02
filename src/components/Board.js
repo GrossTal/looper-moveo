@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { rows } from '../utills';
-import './Board.css';
+import './board.css';
 import Button from './button/button';
 import MediaPlayer from './media-player/media-player';
-import Row from './Row';
-import WrappedRow from './wrapped-row/wrapped-row';
+import Row from './row';
 
 function Board() {
 
@@ -14,7 +13,7 @@ function Board() {
     const [isPlaying, setIsPlaying] = useState(false);
 
 
-    function change() {
+    function changeLoopToggle() {
         setRows(rows => {
             rows.forEach(row => {
                 row.audio.loop = !playInLoop
@@ -60,14 +59,14 @@ function Board() {
 
 
     return (
-        <div className='Board'>
+        <div className='board'>
             <div>
 
                 <div className='rows-container'>
                     {rowsState.map((row, index) => { return <Row row={row} index={index} key={row.id} setRows={setRows} isPlayOn={isPlaying} /> })}
                 </div>
                 <div className='action-buttons-container'>
-                    <Button title='Loop' onClick={change} className={playInLoop ? 'loop-on' : 'loop-off'} />
+                    <Button title='Loop' onClick={changeLoopToggle} className={playInLoop ? 'loop-on' : 'loop-off'} />
                     <Button title='Play' onClick={play} className='play-button' />
                     <Button title='Stop' onClick={stop} className='stop-button' />
                 </div>
