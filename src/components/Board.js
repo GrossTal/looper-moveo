@@ -23,11 +23,9 @@ function Board() {
         })
         setPlayInLoop(playInLoop => !playInLoop);
     }
-
     function play() {
         setRows(rows => {
             rows.forEach((row) => {
-                console.log(row)
                 if (row.isOn) {
                     row.audio.play();
                 }
@@ -42,9 +40,11 @@ function Board() {
             rows.forEach((row) => {
                 row.audio.pause();
                 row.audio.currentTime = 0;
+                row.isOn = false;
             })
             return [...rows]
         })
+        setMarginLeft(0);
         setIsPlaying(false);
     }
 
@@ -74,9 +74,8 @@ function Board() {
             </div>
 
             <div className='media-player-container' style={{overflowX: 'auto',}}>
-                {/* <div style={{ width: 10, height: 10, background: 'yellow', marginLeft: marginLeft, position:'absolute', top: 0 }} /> */}
-                {/* {rowsState.map((row, index) => row.isOn ? <WrappedRow row={row} index={index} key={row.id} setRows={setRows} marginLeft={marginLeft} /> : null)} */}
-            <MediaPlayer rowsState={rowsState} setRows={setRows} marginLeft={marginLeft} isPlaying={isPlaying} isLoopOn={playInLoop} />
+        
+                   <MediaPlayer rowsState={rowsState} setRows={setRows} marginLeft={marginLeft} isPlaying={isPlaying} isLoopOn={playInLoop} />
             </div>
         </div>
     )
