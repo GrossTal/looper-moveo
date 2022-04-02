@@ -1,0 +1,38 @@
+.Board{
+    display: flex;
+    box-shadow: 0 2px 8px rgba(248, 35, 35, 0.25);
+    padding: 10px;
+    border-radius: 12px;
+    background-color: #363535;
+    max-width: 900px;
+    width: 100%;
+}
+
+.action-buttons-container {
+    display: flex;
+    column-gap: 8px;
+    margin-top: 8px;
+}
+
+.rows-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.loop-on {
+    background-color: #24930e;
+}
+
+.loop-off {
+    background-color: #b31111;
+}
+
+.play-button {
+    background-color: white;
+}
+
+.stop-button {
+    background-color: white;
+}
+
