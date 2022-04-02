@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { rows } from '../utills';
-import './board.css';
+import './Board.css';
 import Button from './button/button';
 import MediaPlayer from './media-player/media-player';
-import Row from './row';
+import Row from './Row';
 
 function Board() {
 
